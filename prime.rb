@@ -1,9 +1,8 @@
 def prime?(num)
-  if num == 2
-    return true
-  elsif num <= 1
+  if num < 0 || num == 0 || num == 1
     return false
+
   else
-    return (2...num).all? {|n| !(num % n == 0 )}
+    (2...num).to_a.all? {|n| num % n != 0 }
   end
 end
